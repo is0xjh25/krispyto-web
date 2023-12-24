@@ -11,8 +11,8 @@
   
 ## Overview
 Hello and welcome to the frontend repository of the Krispyto project! Here, you'll find the client-side implementation of our crypto price analysis application. Developed using ReactJS, the frontend offers an intuitive interface for exploring historical crypto prices and associated data. The deployment is handled seamlessly through Amazon Web Services (AWS). This readme document will showcase the initial design, development, and deployment phases of the project. Feel free to utilize the following links to navigate both the website itself and the repository for the backend server.
-- _[Krispyto's Website](url)_
-- _[Krispyto's Server](https://github.com/is0xjh25/krispyto-server)_
+> - _[Krispyto's Website](url)_
+> - _[Krispyto's Server](https://github.com/is0xjh25/krispyto-server)_
   
 ## Design
  ### 1. Note
