@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import TickerWidget from 'components/TickerWidget';
+import ConverterWidget from 'components/ConverterWidget';
+import ChartWidget from 'components/ChartWidget';
+import MarqueeWidget from 'components/MarqueeWidget';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => (
+  <div>
+    <div style={{ width: '300px', height: '200px', border: '1px solid #ccc', padding: '10px' }}>
+      <TickerWidget />
     </div>
-  );
-}
+    <div style={{ width: '300px', height: '200px', border: '1px solid #ccc', padding: '10px' }}>
+      <ConverterWidget />
+    </div>
+    <div style={{ width: '300px', height: '200px', border: '1px solid #ccc', padding: '10px' }}>
+      <ChartWidget />
+    </div>
+    <div style={{ width: '300px', height: '200px', border: '1px solid #ccc', padding: '10px' }}>
+      <MarqueeWidget />
+    </div>
+  </div>
+);
 
 export default App;
