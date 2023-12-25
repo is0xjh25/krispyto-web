@@ -1,6 +1,6 @@
 # Krispyto's Web
 <p align="left">
-  <img alt="Logo" src="public/images/krispyto-logo.png" width="450" >
+  <img alt="Logo" src="src/images/krispyto-logo.png" width="450" >
   
 ## Table of Contents
 * [Overview](#overview)
@@ -56,4 +56,4 @@ Hello and welcome to the frontend repository of the Krispyto project! Here, you'
 - Special gratitude goes to _[CoinGecko](https://www.coingecko.com)_ for providing a free widget that enhances the application's functionality.
 <br/>
 <p align="left">
-  <img alt="Favicon" src="public/images/is0-favicon.png" width="250" >
+  <img alt="Favicon" src="src/images/is0-favicon.png" width="250" >
