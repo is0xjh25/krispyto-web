@@ -3,14 +3,9 @@
 import React from 'react';
 
 const Favourite = () => {
-  const favouriteStyle = {
-    backgroundColor: 'red',
-    minHeight: '100vh', // Ensure the component takes at least the full viewport height
-    padding: '20px', // Add padding for better visibility
-  };
 
   return (
-    <div style={favouriteStyle}>
+    <div>
       <h1>Favourite</h1>
     </div>
   );

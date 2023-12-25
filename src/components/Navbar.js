@@ -1,33 +1,43 @@
 // components/Navbar.js
 
-import React from "react";
-import { useNavigate } from 'react-router-dom';
+import React, { useState }from "react";
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import Logo from 'images/krispyto-logo.png';
+import './styles.css';
 
-const Navbar = ({ className }) => {
-  
-  const navigate = useNavigate();
-  
-  const navbarStyle = {
-    height: '10vh',
-    width: '100%',
-    backgroundColor: '#333', // You can change the background color
-    position: 'fixed',
-    top: 0,
-    zIndex: 1000, // Adjust the z-index as needed
+const Navbar = ({ onSearch, className }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearch = () => {
+    onSearch(searchQuery);
   };
 
   return (
-    <div className={className} style={navbarStyle}>
-      <h1>NAVBAR</h1>
-      <button onClick={()=>navigate('/dashboard', { replace: true })}>
-        DASH
-      </button>
-      <button onClick={()=>navigate('/favourite', { replace: true })}>
-        FAV
-      </button>
-      <button onClick={()=>navigate('/crypto', { replace: true })}>
-        CRY
-      </button>
+    <div className={`navbar-container ${className}`}>
+      <div className='navbar-block' id='navbar-block-nav'>
+        <div className='navbar-block' id='navbar-block-logo'>
+          <img id='navbar-block-logo-img' src={Logo} alt="krispyto-logo"/>
+        </div>
+        <div className='navbar-block' id='navbar-block-search-bar'>
+          <input id="search-input" type="text" placeholder="Find crypto" value={searchQuery} onChange={handleInputChange} />
+          <button id="search-button" onClick={handleSearch}>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+        </div>
+      </div>
+      <div className='navbar-block' id='navbar-block-buttons'>
+        <FontAwesomeIcon icon={faHouse} className="navbar-fa-icon"/>
+        {/* <Link to="/favourite">
+          <FontAwesomeIcon icon={faStar} className="navbar-fa-icon"/>
+        </Link> */}
+      </div>
     </div>
   );
 };

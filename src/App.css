@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Color variables */
+:root {
+  --primary-color: #FD671E;
+  --secondary-color: #78C0E0;
+  --up-color: #00A878;
+  --down-color: #BF2424;
+  --text-color: rgba(0, 0, 0, 0.5);
+  --main-font: 'futura';
+  --backup-font: 'sans-serif';
+  --background-color: #FFFFFF;
+  --main-padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Resetting some default browser styles */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: var(--main-font), var(--backup-font);
+  background-color: var(--background-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Navbar styles */
+nav {
+  background-color: var(--primary-color);
+  height: 200px;
+  width: 100%;
+  top: 0;
+  position: fixed;
 }
 
-.App-link {
-  color: #61dafb;
+/* Main content styles */
+main {
+  margin-top: 200px; /* Adjust this margin to match the height of your navbar */
+  margin-bottom: 100px; /* Adjust this margin to match the height of your footer */
+  overflow-y: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Footer styles */
+footer {
+  background-color: var(--primary-color);
+  height: 100px;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
 }
