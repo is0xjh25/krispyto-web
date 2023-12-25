@@ -1,7 +1,7 @@
 // components/ConverterWidget.js
 
 import React from 'react';
-import useScript from 'utilities/useScript';
+import { useScript } from 'utilities/Utilities';
 
 const ConverterWidget = () => {
   

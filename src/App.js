@@ -1,24 +1,33 @@
+// App.js
 import React from 'react';
-import TickerWidget from 'components/TickerWidget';
-import ConverterWidget from 'components/ConverterWidget';
-import ChartWidget from 'components/ChartWidget';
-import MarqueeWidget from 'components/MarqueeWidget';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Navbar from 'components/Navbar';
+import Footer from 'components/Footer';
+import Dashboard from 'components/Dashboard';
+import Favourite from 'components/Favourite';
+import Crypto from 'components/Crypto';
+import NotFound from 'components/NotFound'; 
 
 const App = () => (
-  <div>
-    <div style={{ width: '300px', height: '200px', border: '1px solid #ccc', padding: '10px' }}>
-      <TickerWidget />
-    </div>
-    <div style={{ width: '300px', height: '200px', border: '1px solid #ccc', padding: '10px' }}>
-      <ConverterWidget />
-    </div>
-    <div style={{ width: '300px', height: '200px', border: '1px solid #ccc', padding: '10px' }}>
-      <ChartWidget />
-    </div>
-    <div style={{ width: '300px', height: '200px', border: '1px solid #ccc', padding: '10px' }}>
-      <MarqueeWidget />
-    </div>
-  </div>
+  <React.Fragment>
+    
+    <Router>
+      <nav>
+        <Navbar />
+      </nav>
+
+      <Routes>
+        <Route exact path="/dashboard" element={<Dashboard />}/>
+        <Route exact path='/favourite'element={<Favourite />}/>
+        <Route exact path='/crypto'element={<Crypto />}/>
+        <Route path="*" element={<NotFound />}/>
+      </Routes>
+
+      <footer>
+        <Footer />
+      </footer>
+    </Router>
+  </React.Fragment>
 );
 
 export default App;

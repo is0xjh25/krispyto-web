@@ -1,7 +1,7 @@
 // components/ChartWidget.js
 
 import React from 'react';
-import useScript from 'utilities/useScript';
+import { useScript } from 'utilities/Utilities';
 
 const ChartWidget = () => {
   
