@@ -59,7 +59,7 @@ const Navbar = ({ onSearch, className }) => {
         </div>
       </div>
       <div className='navbar-block' id='navbar-block-buttons'>
-        <Link to="/dashboard">
+        <Link to="/">
           <FontAwesomeIcon icon={faHouse} className="navbar-fa-icon"/>
         </Link>
       </div>

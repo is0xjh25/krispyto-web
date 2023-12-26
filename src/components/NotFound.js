@@ -22,7 +22,7 @@ const NotFound = (className) => {
         </div>
         <div className="not-found-block-sub">
         <button id="not-found-button">
-          <Link to="/dashboard">
+          <Link to="/">
             <FontAwesomeIcon icon={faHouse} id="not-found-fa-icon"/>Go Home
           </Link>
         </button>

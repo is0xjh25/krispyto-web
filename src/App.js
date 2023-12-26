@@ -10,7 +10,7 @@ const App = () => (
   <>
     <Router>
       <Routes>
-        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/" element={<Dashboard />} />
         <Route exact path="/crypto/:crypto" element={<Crypto />} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
