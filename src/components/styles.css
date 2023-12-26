@@ -1,5 +1,86 @@
 /* components/styles.css */
 
+/* Not Found */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+  color: var(--text-color);
+}
+  
+.not-found-block {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 100%;
+}
+
+.not-found-block h1 {
+  font-size: 5rem;
+}
+  
+.not-found-block h3 {
+  font-size: 2rem;
+}
+
+#not-found-block-logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10%;
+  width: 100%;
+}
+
+#not-found-block-logo-img {
+  width: 60%;
+}
+
+.not-found-block-sub{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#not-found-button {
+  font-size: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#not-found-button a {
+  color: white;
+  text-decoration: none;
+}
+
+#not-found-fa-icon {
+  margin-right: 1rem;
+}
+
+#not-found-button:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#not-found-button:hover a {
+  color: var(--secondary-color)
+}
+
+#not-found-button:hover #not-found-fa-icon {
+  color: var(--secondary-color)
+}
+
 /* Navbar styles */
 .navbar-container {
   display: flex;

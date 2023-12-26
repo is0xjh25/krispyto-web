@@ -1,10 +1,10 @@
 // components/Navbar.js
 
-import React, { useState }from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faHouse, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Logo from 'images/krispyto-logo.png';
 import './styles.css';
 
@@ -33,10 +33,12 @@ const Navbar = ({ onSearch, className }) => {
         </div>
       </div>
       <div className='navbar-block' id='navbar-block-buttons'>
-        <FontAwesomeIcon icon={faHouse} className="navbar-fa-icon"/>
-        {/* <Link to="/favourite">
+        <Link to="/favourite">
           <FontAwesomeIcon icon={faStar} className="navbar-fa-icon"/>
-        </Link> */}
+        </Link>
+        <Link to="/dashboard">
+          <FontAwesomeIcon icon={faHouse} className="navbar-fa-icon"/>
+        </Link>        
       </div>
     </div>
   );
