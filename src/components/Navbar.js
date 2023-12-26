@@ -1,14 +1,19 @@
 // components/Navbar.js
 
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faHouse, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useSnackbar } from 'notistack';
+import { findCrypto } from 'api/api';
 import Logo from 'images/krispyto-logo.png';
 import './styles.css';
 
 const Navbar = ({ onSearch, className }) => {
+
+  const navigate = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleInputChange = (event) => {
@@ -16,7 +21,25 @@ const Navbar = ({ onSearch, className }) => {
   };
 
   const handleSearch = () => {
-    onSearch(searchQuery);
+    if (searchQuery === '') {
+      enqueueSnackbar("There is nothing to search!", { variant: 'warning' });
+    } else {
+      findCrypto(searchQuery)
+        .then((result) => {
+          if (result.ok) {
+            return result.body;
+          } else {
+            throw new Error('Crypto not found!');
+          }
+        })
+        .then((data) => {
+          navigate(`/crypto/${data['symbol']}`);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          enqueueSnackbar(error.message, { variant: 'error' });
+        });
+    }
   };
 
   return (
