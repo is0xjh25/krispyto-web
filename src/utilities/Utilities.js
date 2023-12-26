@@ -18,18 +18,4 @@ const useScript = url => {
   }, [url]);
 };
 
-const setCookie = (name, value, days) => {
-  Cookies.set(`${name}`, `${value}`, { expires: days, secure: true, SameSite: 'None' });
-  return name;
-};
-
-const getCookie = name => {
-  const cookie = Cookies.get(`${name}`);
-  return cookie ? cookie : "";
-};
-
-const deleteCookie = name => {
-  Cookies.remove(`${name}`);
-};
-
-export { useScript, setCookie, getCookie, deleteCookie };
+export { useScript };

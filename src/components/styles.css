@@ -1,5 +1,88 @@
 /* components/styles.css */
 
+/* Dashboard */
+.dashboard-container {
+  height: calc(100vh - 300px);
+  color: var(--text-color);
+}
+
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.dashboard-table {
+  width: 100%;
+  overflow: auto;
+  font-size: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#dashboard-header-text {
+  flex: 3;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  padding: 10px;
+}
+
+#dashboard-header-calendar {
+  flex: 2;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 10px;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  text-align: center;
+}
+
+.clickable-row:hover {
+  background-color: var(--secondary-color); /* Change to your desired hover color */
+  cursor: pointer;
+}
+
+.header-button {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+#rocket-button {
+  border: none;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+#rocket-button-fav {
+  font-size: 50px;
+  color: var(--text-color);
+}
+
+#rocket-button-fav:hover {
+  color: var(--secondary-color);
+}
+
+#dashboard-thead {
+  color: var(--secondary-color);
+}
+
+.header-button:hover {
+  color: var(--secondary-color);
+}
+
 /* Crypto */
 .crypto-container {
   display: flex;
@@ -376,6 +459,20 @@
 
   #crypto-block-chart {
     display: none;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  #dashboard-header-text {
+    flex: 1;
+    text-align: center;
+  }
+  
+  #dashboard-header-calendar {
+    flex: 1;
+    text-align: center;
   }
 }
 

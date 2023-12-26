@@ -24,34 +24,10 @@ function findCrypto(name) {
 	});
 };
 
-// get all crypto data 
-function allCrypto(req) {
-	const url = `${BASE_URL}/id=all&date=${req.date}&order_by=${req.orderBy}&order_type=${req.orderType}`;
-	const info = {
-		method: 'GET',
-		headers: {'Content-Type': 'application/json'},
-	};
-
-	return fetch(url, info)
-	.then(res => {
-		return res.json()
-		.then(body => {
-			return {
-				ok: res.ok,
-				status: res.status,
-				body: body
-			};
-		})
-    .catch((error) => {
-      console.log(error);
-    });
-	});
-};
-
-// get all favourite crypto data
+// get crypto data
 function getCrypto(req) {
-  const url = `${BASE_URL}/id=${req.crypto}&date=${req.date}&order_by=${req.orderBy}&order_type=${req.orderType}`;
-	const info = {
+  const url = `${BASE_URL}/dashboard?id=${req.id}&date=${req.date}&order_by=${req.orderBy}&order_type=${req.orderType}`;
+  const info = {
 		method: 'GET',
 		headers: {'Content-Type': 'application/json'},
 	};
@@ -75,6 +51,5 @@ function getCrypto(req) {
 
 export {
 	findCrypto,
-  allCrypto,
   getCrypto
 };
