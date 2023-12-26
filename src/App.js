@@ -13,7 +13,7 @@ const App = () => (
       <Routes>
         <Route exact path="/dashboard" element={<Dashboard />} />
         <Route exact path="/favourite" element={<Favourite />} />
-        <Route exact path="/crypto/:name" element={<Crypto />} />
+        <Route exact path="/crypto/:crypto" element={<Crypto />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

@@ -1,5 +1,101 @@
 /* components/styles.css */
 
+/* Crypto */
+.crypto-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 300px);
+  width: auto;
+  color: var(--text-color);
+}
+
+.crypto-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#crypto-block-title {
+  flex: 1;
+  flex-direction: row;
+}
+
+#crypto-block-button {
+  flex: 2;
+  align-items: center;
+  height: 100%;
+}
+
+#crypto-block-favicon {
+  color: var(--secondary-color);
+  height: 32px;
+}
+
+#crypto-block-button button {
+  width: auto;
+  height: 100%;
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+#crypto-block-subtitle {
+  flex: 3;
+  align-items: center;
+  height: 100%;
+}
+
+#crypto-block-marquee {
+  flex: 1;
+}
+
+#crypto-block-ticker {
+  flex: 1;
+}
+
+#crypto-block-converter {
+  flex: 1;
+}
+
+#crypto-block-chart {
+  flex: 3;
+  width: auto;
+}
+
+#crypto-block-sub {
+  flex: 5;
+  flex-direction: row;
+}
+
+#crypto-block-sub-sub {
+  flex: 2;
+  height: 100%;
+}
+
+.crypto-block h1 {
+  display: inline-block;
+}
+
+#marquee {
+  width: 80%;
+}
+
+#ticker {
+  width: 80%;
+}
+
+#converter {
+  width: 80%;
+}
+
+#chart {
+  width: 95%;
+}
+
 /* Not Found */
 .not-found-container {
   display: flex;
@@ -81,7 +177,7 @@
   color: var(--secondary-color)
 }
 
-/* Navbar styles */
+/* Navbar */
 .navbar-container {
   display: flex;
   justify-content: center;
@@ -187,7 +283,7 @@
   color: var(--primary-color);
 }
 
-/* Footer styles */
+/* Footer */
 .footer-container {
   color: var(--secondary-color);
   height: 100%;
@@ -272,6 +368,14 @@
 
   #footer-favicon {
     text-align: center;
+  }
+
+  #crypto-block-sub{
+    flex-direction: column;
+  }
+
+  #crypto-block-chart {
+    display: none;
   }
 }
 

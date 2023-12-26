@@ -33,7 +33,8 @@ const Navbar = ({ onSearch, className }) => {
           }
         })
         .then((data) => {
-          navigate(`/crypto/${data['symbol']}`);
+          const { name, symbol } = data;
+          navigate(`/crypto/${name}-${symbol}`);
         })
         .catch((error) => {
           console.error('Error:', error);
@@ -61,7 +62,7 @@ const Navbar = ({ onSearch, className }) => {
         </Link>
         <Link to="/dashboard">
           <FontAwesomeIcon icon={faHouse} className="navbar-fa-icon"/>
-        </Link>        
+        </Link>
       </div>
     </div>
   );

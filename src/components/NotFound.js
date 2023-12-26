@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import Logo from 'images/krispyto-logo.png';
-import "./styles.css";
+import './styles.css';
 
 const NotFound = (className) => {
   return (

@@ -35,8 +35,9 @@ nav {
 
 /* Main content styles */
 main {
-  margin-top: 200px; /* Adjust this margin to match the height of your navbar */
-  margin-bottom: 100px; /* Adjust this margin to match the height of your footer */
+  margin-top: 200px;
+  margin-bottom: 100px;
+  height: calc(100vh - 300px);
   overflow-y: auto;
 }
 
