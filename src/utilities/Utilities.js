@@ -1,7 +1,6 @@
 // utilities/Utilities.js
 
 import { useEffect } from 'react';
-import Cookies from 'js-cookie';
 
 const useScript = url => {
   useEffect(() => {

@@ -35,7 +35,7 @@ const Footer = ({ className }) => {
             <h3><FontAwesomeIcon icon={faEnvelope} className="fa-icon"/><a href="mailto:is0.jimhsiao@gmail.com">Email ME</a></h3>
           </div>
           <div className='footer-block-sub-sub'>
-            <h3><FontAwesomeIcon icon={faSquarePhone} className="fa-icon"/><a>+61415863535</a></h3>
+            <h3><FontAwesomeIcon icon={faSquarePhone} className="fa-icon"/><a href="https://www.linkedin.com/in/jim-hsiao/" target="_blank" rel="noopener noreferrer">+61415863535</a></h3>
           </div>
         </div>
         <div className='footer-block-sub'>
