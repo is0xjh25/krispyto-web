@@ -41,11 +41,18 @@ const Dashboard = ({className }) => {
     
     let ok;
     let type = orderType
+    console.log(orderType)
+    console.log(orderBy)
     if (by === orderBy) {
-      type = 'asc' ? 'desc' : 'asc'
+      if (type === 'asc') {
+        type ='desc'
+      } else {
+        type ='asc'
+      }
     } else {
       type = 'desc'
     }
+
     enqueueSnackbar(`Sorting by ${capital(by)} (${capital(type)}).`, { variant: 'success' });
 
     getCrypto({ id: id, date: date.format('YYYY-MM-DD'), orderBy: by, orderType: type })
@@ -66,7 +73,7 @@ const Dashboard = ({className }) => {
     });
 
     setOrderBy(by);
-    setOrderType('desc');
+    setOrderType(type);
   };
 
   const handleRocket = () => {

@@ -12,7 +12,7 @@ RUN npm install
 # Copying all the files in our project
 COPY . .
 
-EXPOSE 80
+EXPOSE 3000
 
 # Starting our application
-CMD ["npm","start"]
+CMD ["npm","start","--host","0.0.0.0","--port","3000"]

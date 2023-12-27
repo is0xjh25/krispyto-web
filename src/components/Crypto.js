@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
-import MarqueeWidget from 'components/MarqueeWidget';
-import TickerWidget from 'components/TickerWidget';
-import ConverterWidget from 'components/ConverterWidget';
-import ChartWidget from 'components/ChartWidget';
+// import MarqueeWidget from 'components/MarqueeWidget';
+// import TickerWidget from 'components/TickerWidget';
+// import ConverterWidget from 'components/ConverterWidget';
+// import ChartWidget from 'components/ChartWidget';
 
 import './styles.css';
 
@@ -33,7 +33,7 @@ const Crypto = (className) => {
           <div className='crypto-block' id='crypto-block-title'>
             <h1> watching: {name} - {symbol}</h1>
           </div>
-          <div className='crypto-block' id='crypto-block-marquee'>
+          {/* <div className='crypto-block' id='crypto-block-marquee'>
             <MarqueeWidget/>
           </div>
           <div className='crypto-block'  id='crypto-block-sub'>
@@ -48,7 +48,7 @@ const Crypto = (className) => {
             <div className='crypto-block' id='crypto-block-chart'>
               <ChartWidget id={name}/> 
             </div>
-          </div>
+          </div> */}
         </div>
       </main>
       <footer>
