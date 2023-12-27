@@ -41,8 +41,6 @@ const Dashboard = ({className }) => {
     
     let ok;
     let type = orderType
-    console.log(orderType)
-    console.log(orderBy)
     if (by === orderBy) {
       if (type === 'asc') {
         type ='desc'
