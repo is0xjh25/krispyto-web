@@ -5,7 +5,7 @@
 ## Table of Contents
 * [Overview](#overview)
 * [Design](#design)
-* [Deveploment and Technologies](#development-and-technologies)
+* [Development and Technologies](#development-and-technologies)
 * [Deployment](#deployment)
 * [Developed By](#developed-by)
   
