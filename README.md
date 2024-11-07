@@ -129,7 +129,7 @@ REACT_APP_API_URL="api_server_ip_address"
   ```
   
 ## Developed By
-- The application is developed by _[is0xjh25 (Yun-Chi Hsiao)](https://is0xjh25.github.io)_.
+- The application is developed by _[is0xJim](https://linktr.ee/is0xjh25)_.
 - Special thanks to the _[Greythorn Team](https://greythorn.com)_ for providing this coding challenge and their guidance throughout the development process.
 - Special gratitude goes to _[CoinGecko](https://www.coingecko.com)_ for providing a free widget that enhances the application's functionality.
 <br/>
